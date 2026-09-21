@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+:root{
+    --bg:#08111f;
+    --card:#0e1a2c;
+    --text:#f3f7ff;
+    --muted:#9caac0;
+    --line:#20304a;
+    --accent:#5eead4;
+    --accent2:#7c8cff}
+    *{
+        box-sizing:border-box;
+        scroll-behavior:smooth
+    }
+    body{
+        margin:0;
+        background:var(--bg);
+        color:var(--text);
+        font-family:'DM Sans',sans-serif;line-height:1.6
+    }
+    .nav{
+        position:fixed;
+        z-index:10;
+        top:0;
+        width:100%;
+        height:76px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        padding:0 7%;
+        background:rgba(8,17,31,.78);
+        backdrop-filter:blur(18px);
+        border-bottom:1px solid rgba(255,255,255,.06)
+    }
+    .brand{
+        font:700 28px 'Space Grotesk';
+        color:#fff;
+        text-decoration:none
+    }
+    .brand span,h1 span,h2 span{
+        color:var(--accent)
+    }
+    nav{
+        display:flex;
+        gap:28px
+    }
+    nav a{
+        color:var(--muted);
+        text-decoration:none;
+        font-size:14px;
+        font-weight:600
+    }
+    nav a:hover{
+        color:#fff
+    }
+    .menu{
+        display:none;
+        background:none;
+        color:#fff;
+        border:0;
+        font-size:25px
+    }
+    .hero{
+        min-height:100vh;
+        padding:150px 8% 90px;
+        display:grid;
+        grid-template-columns:1.15fr .85fr;
+        align-items:center;
+        gap:60px;
+        background:radial-gradient(circle at 75% 35%,rgba(124,140,255,.18),transparent 28%),
+        radial-gradient(circle at 10% 70%,rgba(94,234,212,.08),transparent 25%)
+    }
+    .eyebrow{
+        letter-spacing:3px;
+        font-size:12px;
+        font-weight:700;
+        color:var(--accent);
+        margin:0 0 20px
+    }
+    .hero h1{
+        font:700 clamp(48px,7vw,82px)/1.02 'Space Grotesk';
+        margin:0 0 25px;
+        letter-spacing:-3px
+    }
+    .lead,.wide{
+        color:var(--muted);
+        max-width:680px;
+        font-size:18px
+    }
+    .actions{
+        display:flex;
+        gap:14px;
+        margin:35px 0
+    }
+    .btn{
+        display:inline-block;
+        padding:13px 21px;
+        border-radius:9px;
+        text-decoration:none;
+        font-weight:700
+    }
+    .primary{
+        background:var(--accent);
+        color:#06121d
+    }
+    .ghost{
+        border:1px solid var(--line);
+        color:#fff
+    }
+    .stats{
+        display:flex;
+        gap:40px;
+        margin-top:45px
+    }
+    .stats div{
+        display:grid
+    }
+    .stats b{
+        font:700 25px 'Space Grotesk'
+    }
+    .stats small{
+        color:var(--muted);
+        font-size:11px;
+        text-transform:uppercase;
+        letter-spacing:2px
+    }
+    .portrait{
+        position:relative;
+        display:flex;
+        justify-content:center
+    }
+    .portrait-ring{
+        width:min(370px,80vw);
+        height:min(370px,80vw);
+        border-radius:50%;
+        padding:12px;
+        background:linear-gradient(135deg,var(--accent),var(--accent2));
+        box-shadow:0 30px 90px rgba(0,0,0,.4)
+    }
+    .avatar{
+        width:100%;
+        height:100%;
+        border-radius:50%;
+        display:grid;
+        place-items:center;
+        background:linear-gradient(145deg,#182840,#0a1424);
+        font:700 90px 'Space Grotesk';color:#fff
+    }
+    .float-card{
+        position:absolute;
+        bottom:15px;
+        left:5%;
+        background:rgba(14,26,44,.9);
+        padding:15px 20px;
+        border:1px solid var(--line);
+        border-radius:12px;
+        font-weight:700
+    }
+    .float-card small{
+        color:var(--muted)
+    }
+    .section{
+        padding:110px 8%;
+        border-top:1px solid rgba(255,255,255,.05)
+    }
+    .section h2{
+        font:700 clamp(36px,5vw,58px)/1.08 'Space Grotesk';
+        margin:0 0 25px;
+        letter-spacing:-2px
+    }
+    .alt{
+        background:#0a1526
+    }
+    .chips{
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px;
+        margin-top:35px
+    }
+    .chips span,.project span{
+        border:1px solid var(--line);
+        padding:8px 12px;
+        border-radius:999px;
+        color:#c7d2e3;
+        font-size:12px
+    }
+    .timeline{
+        max-width:850px;
+        margin-top:45px
+    }
+    .timeline article{
+        display:flex;
+        gap:25px;
+        padding:25px 0;
+        border-bottom:1px solid var(--line)
+    }
+    .timeline i{
+        font-style:normal;
+        color:var(--accent);
+        font-weight:700
+    }
+    .timeline h3{
+        margin:0 0 7px;
+        font-size:20px
+    }
+    .timeline p{
+        margin:0;
+        color:var(--muted)
+    }
+    .skill-grid{
+        display:grid;
+        grid-template-columns:repeat(3,1fr);
+        gap:25px;
+        margin-top:45px
+    }
+    .skill{
+        padding:25px;
+        background:var(--card);
+        border:1px solid var(--line);
+        border-radius:14px
+    }
+    .skill>div:first-child{
+        display:flex;
+        justify-content:space-between
+    }
+    .skill span{
+        color:var(--accent)
+    }
+    .bar{
+        height:7px;
+        background:#1a2940;
+        border-radius:9px;
+        margin-top:18px;
+        overflow:hidden
+    }
+    .bar em{
+        display:block;
+        height:100%;
+        background:linear-gradient(90deg,var(--accent),var(--accent2));
+        border-radius:9px
+    }
+    .project-grid{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:22px;
+        margin-top:45px
+    }
+    .project{
+        padding:32px;
+        background:var(--card);
+        border:1px solid var(--line);
+        border-radius:16px;
+        transition:.25s
+    }
+    .project:hover{
+        transform:translateY(-6px);
+        border-color:#3b5275
+    }
+    .project .num{
+        color:var(--accent);
+        font:700 13px 'Space Grotesk'
+    }
+    .project h3{
+        font:700 25px 'Space Grotesk'
+    }
+    .project p{
+        color:var(--muted);
+        min-height:80px
+    }
+    .resume{
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:30px;
+        background:linear-gradient(100deg,#0d1b2f,#10182a)
+    }
+    .contact-grid{
+        display:grid;
+        grid-template-columns:repeat(2,1fr);
+        gap:15px;
+        margin-top:45px
+    }
+    .contact-grid>*{
+        padding:25px;
+        background:var(--card);
+        border:1px solid var(--line);
+        border-radius:14px;
+        text-decoration:none;
+        color:#fff
+    }
+    .contact-grid small{
+        display:block;
+        color:var(--accent);
+        letter-spacing:2px;
+        font-size:10px;
+        margin-bottom:8px
+    }
+    .contact-grid strong{
+        font-size:15px;
+        word-break:break-word
+    }
+    footer{
+        padding:30px 8%;
+        border-top:1px solid var(--line);
+        color:var(--muted);
+        font-size:13px
+    }
+    footer span{
+        color:var(--accent);
+        padding:0 8px
+    }
+    @media(max-width:800px){.nav{
+        padding:0 5%
+    }
+    .menu{
+        display:block
+    }
+    nav{
+        display:none;
+        position:absolute;
+        top:76px;
+        left:0;
+        right:0;
+        padding:20px 6%;
+        background:#0b1627;
+        flex-direction:column
+    }
+    .nav.open nav{
+        display:flex
+    }
+    .hero{
+        grid-template-columns:1fr;
+        padding:130px 7% 70px
+    }
+    .portrait{
+        order:-1
+    }
+    .portrait-ring{
+        width:240px;
+        height:240px
+    }
+    .avatar{
+        font-size:65px
+    }
+    .float-card{
+        left:10%;
+        bottom:0
+    }
+    .section{
+        padding:80px 7%
+    }
+    .skill-grid,.project-grid,.contact-grid{
+        grid-template-columns:1fr
+    }
+    .resume{
+        display:block
+    }
+    .resume .btn{
+        margin-top:15px
+    }
+    .hero h1{
+        letter-spacing:-2px
+    }
+}
